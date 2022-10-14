@@ -5,6 +5,8 @@ const {
     MessageButton,
 } = require("discord.js");
 const hexCheck = require('is-hexcolor')
+const QuickDB = require('quick.db')
+client.db = new QuickDB({filePath: "./Data/database.sqlite"});
 module.exports = {
     name: "ticket",
     cooldowns: 7000,
