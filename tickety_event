@@ -5,6 +5,8 @@ const {
     MessageSelectMenu,
     MessageButton
 } = require("discord.js");
+const QuickDB = require('quick.db')
+client.db = new QuickDB({filePath: "./Data/database.sqlite"});
 client.on("interactionCreate", async (interaction) => {
     if(!interaction.isButton()) return
     if(interaction.customId != `ticket`) return
